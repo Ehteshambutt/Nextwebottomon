@@ -1,0 +1,5 @@
+/* CustomInput.module.css */
+.placeholder-font-bold::placeholder {
+    font-weight: bold;
+  }
+  
