@@ -1,5 +1,6 @@
 'use client'
-import React, { useEffect, useRef } from 'react'
+import axios from 'axios';
+import React, { useEffect, useRef, useState } from 'react'
 
 const ProductCard = ({ name, price, image, hoverImage, discount, size, category, selectedGrid, index, pageType }) => {
     const imageRef = useRef();
@@ -27,6 +28,21 @@ const ProductCard = ({ name, price, image, hoverImage, discount, size, category,
         icon2Ref.current.style.display = 'none';
         imageRef.current.src = '/SampleProduct.jpg'
     }
+    const [mattresses, setMattresses] = useState([]);
+
+  useEffect(() => {
+    const fetchMattresses = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/v1/mattresses');
+        console.log('API Response:1', response.data);
+        setMattresses(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchMattresses();
+  }, []);
     return (
         selectedGrid === 0 ? <div className={`flex p-[20px] md:gap-x-4  border border-primary ${index >= 0 && index < 9 ? "border-b-0" : ""} `}>
             <div className="overflow-hidden rounded-t-xl relative " >

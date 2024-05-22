@@ -396,48 +396,48 @@ const Navbar = () => {
                     Shop by Type
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/MemoryFoam" className="hover:text-[#08c]">
                       Memory Foam
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/PocketSprung" className="hover:text-[#08c]">
                       Pocket Sprung
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Orthopaedic" className="hover:text-[#08c]">
                       Orthopaedic
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Latex" className="hover:text-[#08c]">
                       Latex
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Miracoil" className="hover:text-[#08c]">
                       Miracoil
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/NaturalFillings" className="hover:text-[#08c]">
                       Natural Fillings
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/CutBedMattresses" className="hover:text-[#08c]">
                       Cut Bed Mattresses
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/KidsMattresses" className="hover:text-[#08c]">
                       Kids Mattresses
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/NextDayMattresses" className="hover:text-[#08c]">
                       Next Day Mattresses
                     </Link>
                   </li>
@@ -448,28 +448,28 @@ const Navbar = () => {
                     Shop by Firmness
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/ExtraFirm" className="hover:text-[#08c]">
                       Extra Firm
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Firm" className="hover:text-[#08c]">
                       Firm
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/MediumFirm" className="hover:text-[#08c]">
                       Medium Firm
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Medium" className="hover:text-[#08c]">
                       Medium
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/SoftFirm" className="hover:text-[#08c]">
                       Soft Firm
                     </Link>
                   </li>
@@ -480,38 +480,38 @@ const Navbar = () => {
                     Shop by Size
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/SuperKing" className="hover:text-[#08c]">
                       Super King(6&apos;)
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/KingSize" className="hover:text-[#08c]">
                       King Size(5&apos;)
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Double" className="hover:text-[#08c]">
                       Double(4&apos; 6&apos;&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/SmallDouble" className="hover:text-[#08c]">
                       Small Double(4&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/Single" className="hover:text-[#08c]">
                       Single(3&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/SmallSingle" className="hover:text-[#08c]">
                       Small Single(2&apos; 6&apos;&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/mattresses/European" className="hover:text-[#08c]">
                       European
                     </Link>
                   </li>

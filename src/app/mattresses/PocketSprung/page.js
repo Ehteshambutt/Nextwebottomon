@@ -1,11 +1,12 @@
 "use client"
+import { useEffect, useState } from "react";
+import axios from 'axios';
 import Drawer from "@/components/ButtomDrawer";
 import ProductFilter from "@/components/ProductFilter";
 import ProductGridSelector from "@/components/ProductGridSelector";
 import ProductList from "@/components/ProductList";
 import ProductListMatress from "@/components/ProductListMatress";
 
-import { useState } from "react";
 const sortOptions = [
     "Featured",
     "Best selling",
@@ -16,12 +17,29 @@ const sortOptions = [
     "Date, old to new",
     "Date, new to old"
 ]
-const ProductListingPage = () => {
+
+
+const PocketSprung = () => {
     const [selected, setSelected] = useState("Featured")
     const [isOpen, setIsOpen] = useState(false);
     const [selectedGrid, setSelectedGrid] = useState(2);
     const [openBottom, setOpenBottom] = useState(false);
     const handleClick = () => setIsOpen(!isOpen);
+    const [mattresses, setMattresses] = useState([]);
+
+  useEffect(() => {
+    const fetchMattresses = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/api/v1/mattresses');
+        console.log('API Response:', response.data);
+        setMattresses(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchMattresses();
+  }, []);
     return (
         <div className="">
             <div>
@@ -73,7 +91,7 @@ const ProductListingPage = () => {
                         </ul>
                     </div>
                     <div className="list">
-                        <ProductListMatress CallingFrom='Mattress' pageType={'Mattress'} selectedGrid={selectedGrid} setSelectedGrid={setSelectedGrid} />
+                        <ProductListMatress CallingFrom='PocketSprung' pageType={'PocketSprung'} selectedGrid={selectedGrid} setSelectedGrid={setSelectedGrid} />
                     </div>
                     <div className="paginatiion">
                     </div>
@@ -84,4 +102,4 @@ const ProductListingPage = () => {
     );
 };
 
-export default ProductListingPage;
+export default PocketSprung;

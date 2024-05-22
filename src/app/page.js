@@ -5,7 +5,7 @@ import React from "react";
 import CarouselSlider from "@/components/carousel/CarouselSlider";
 import HomeCards from "@/components/cards/HomeCards";
 import { Products } from '@/data/products';
-import ProductCard from '@/components/ProductCard';
+import ProductListMatress from '@/components/ProductListMatress';
 
 export default function Home() {
   const images = [
@@ -71,7 +71,7 @@ export default function Home() {
       </div>
       <div className='trending-text-below'>Top view in this weeks</div>
       <div className='grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-8 my-8'>
-      {Products.slice(0, 16).map((item, i) => (<ProductCard key={i} {...item} index={i} />))}
+      {Products.slice(0, 16).map((item, i) => (<ProductListMatress key={i} {...item} index={i} />))}
         </div>
         <div className='text-center my-8'>
           <button class="btn btn-outline rounded-full font-bold border-[3px]">Load More</button>
