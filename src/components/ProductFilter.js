@@ -1,4 +1,4 @@
-import { BedFinish, BedStorage, BedTypes, Brands, MatressTypes, MattressFirmness, Prices, Sizes } from '@/data/fliter'
+import { BedFinish, BedStorage, BedTypes, Brands, MatressTypes, MattressFirmness, Prices, Sizes } from '../data/fliter'
 import React from 'react'
 
 const ProductFilter = ({ pageType }) => {

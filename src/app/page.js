@@ -2,11 +2,13 @@
 
 import '../css/styles.css'
 import React from "react";
-import CarouselSlider from "@/components/carousel/CarouselSlider";
-import HomeCards from "@/components/cards/HomeCards";
-import { Products } from '@/data/products';
-import ProductListMatress from '@/components/ProductListMatress';
-
+import CarouselSlider from "../components/carousel/CarouselSlider";
+import HomeCards from "../components/cards/HomeCards";
+import { Products } from '../data/products';
+import ProductListMatress from '../components/ProductListMatress';
+// import { Provider } from 'react-redux';
+// import { PersistGate } from 'redux-persist/integration/react';
+// import store from './Redux/Store/store'; // Adjust the path as necessary
 export default function Home() {
   const images = [
     "/divan-beds.jpg",
@@ -64,9 +66,9 @@ export default function Home() {
       <div >
       <div className='fw-1000 text-center mt-8 mb-3 trending-text' >Trending
       </div>
-      <div class="underline-container ">
-      <div class="underline"></div>
-      <div class="underline"></div>
+      <div className="underline-container ">
+      <div className="underline"></div>
+      <div className="underline"></div>
       </div>
       </div>
       <div className='trending-text-below'>Top view in this weeks</div>
@@ -74,7 +76,7 @@ export default function Home() {
       {Products.slice(0, 16).map((item, i) => (<ProductListMatress key={i} {...item} index={i} />))}
         </div>
         <div className='text-center my-8'>
-          <button class="btn btn-outline rounded-full font-bold border-[3px]">Load More</button>
+          <button className="btn btn-outline rounded-full font-bold border-[3px]">Load More</button>
         </div>
         <div className='grid md:grid-cols-2 gap-6 my-16' >
           <div className='h-100 w-100 relative' ><img src='/offer-1.png' style={{ objectFit: 'contain' }}></img>

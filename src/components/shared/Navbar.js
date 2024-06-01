@@ -372,7 +372,9 @@ const Navbar = () => {
                 <span className="font-bold text-[0.6rem]">Account</span>
               </div>
               <div className="flex flex-col items-center gap-1 cursor-pointer">
-                <Image src={basket} width={18} height={18} alt="Basket" />
+                <Image src={basket} onClick={()=>{
+                  router.push('/paymentMethod/NewPaymentCardSetup')
+                }} width={18} height={18} alt="Basket" />
                 <span className="font-bold text-[0.6rem]">Basket</span>
               </div>
             </div>
@@ -547,48 +549,48 @@ const Navbar = () => {
                     Shop by Type
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/memoryFoam" className="hover:text-[#08c]">
                       Memory Foam
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/PocketSprung" className="hover:text-[#08c]">
                       Pocket Sprung
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/Orthopaedic" className="hover:text-[#08c]">
                       Orthopaedic
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/Latex" className="hover:text-[#08c]">
                       Latex
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/Miracoil" className="hover:text-[#08c]">
                       Miracoil
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/NaturalFillings" className="hover:text-[#08c]">
                       Natural Fillings
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/CutBedMattresses" className="hover:text-[#08c]">
                       Cut Bed Mattresses
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/KidsMattresses" className="hover:text-[#08c]">
                       Kids Mattresses
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/NextDayMattresses" className="hover:text-[#08c]">
                       Next Day Mattresses
                     </Link>
                   </li>
@@ -600,33 +602,33 @@ const Navbar = () => {
                     Shop by Size
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/SuperKingsBeds" className="hover:text-[#08c]">
                       Super Kings Beds(6&apos;)
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/KingSizeBeds" className="hover:text-[#08c]">
                       King Size Beds(5&apos;)
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/DoubleBeds" className="hover:text-[#08c]">
                       Double Beds(4&apos; 6&apos;&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/SmallDoubleBeds" className="hover:text-[#08c]">
                       Small Double Beds(4&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/SingleBeds" className="hover:text-[#08c]">
                       Single Beds(3&apos;)
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/beds/SmallSingleBeds" className="hover:text-[#08c]">
                       Small Single Beds(2&apos; 6&apos;&apos;)
                     </Link>
                   </li>{" "}
@@ -665,23 +667,23 @@ const Navbar = () => {
               <div onClick={exitAccessoriesDropdown} className="bottom-[3%] relative max-xl:bottom-[-3%] max-lg:bottom-[-5%] w-[60vw] bg-white shadow-xl  z-50 dropdowncontent accessories-content h-[60vh] max-lg:h-[70vh] max-lg:w-[70vw] hidden rounded-b-2xl">
                 <ul className="py-8 px-10 relative h-[100%] max-xl:px-5 max-xl:py-5 leading-8 max-lg:leading-7">
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/accessories/Pillows" className="hover:text-[#08c]">
                       Pillows
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/accessories/Duvetts" className="hover:text-[#08c]">
                       Duvetts
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/accessories/MattressToppers" className="hover:text-[#08c]">
                       Mattress Toppers
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/accessories/Headboards" className="hover:text-[#08c]">
                       Headboards
                     </Link>
                   </li>
@@ -704,33 +706,33 @@ const Navbar = () => {
                 <ul className="  w-[33%]  h-[100%]  px-10 py-8 max-xl:px-5 max-xl:py-5 leading-8 max-lg:leading-7">
                   <li className="my-4 font-semibold text-[1.2rem]">Sale</li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/sales/DivanBeds" className="hover:text-[#08c]">
                       Divan Beds
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/sales/DivanBasesOnly" className="hover:text-[#08c]">
                       Divan Bases Only
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/sales/BedFrames" className="hover:text-[#08c]">
                       Bed Frames
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/sales/Mattresses" className="hover:text-[#08c]">
                       Mattresses
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/sales/Headboards" className="hover:text-[#08c]">
                       Headboards
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/sales/Furniture" className="hover:text-[#08c]">
                       Furniture
                     </Link>
                   </li>
@@ -747,33 +749,33 @@ const Navbar = () => {
                     Clearance
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/clearance/DivanBases" className="hover:text-[#08c]">
                       Divan Bases
                     </Link>{" "}
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/clearance/Mattresses" className="hover:text-[#08c]">
                       Mattresses
                     </Link>
                   </li>
                   <li className="">
                     {" "}
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/clearance/BedFrames" className="hover:text-[#08c]">
                       Bed Frames
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/clearance/Headboards" className="hover:text-[#08c]">
                       Headboards
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/clearance/Furniture" className="hover:text-[#08c]">
                       Furniture
                     </Link>
                   </li>
                   <li className="">
-                    <Link href="#" className="hover:text-[#08c]">
+                    <Link href="/clearance/ClearanceBundles" className="hover:text-[#08c]">
                       Clearance Bundles
                     </Link>
                   </li>
