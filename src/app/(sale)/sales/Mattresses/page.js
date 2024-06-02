@@ -1,10 +1,9 @@
 "use client"
 import Drawer from "../../../../components/ButtomDrawer";
-import ProductFilter from "../../../../components/ProductFilter";
+ import ProductFilter from  '../../../../../src/components/ProductFilter'
 import ProductGridSelector from "../../../../components/ProductGridSelector";
-import ProductListAccessories from "../../../../components/ProductListAccessories";
-import ProductListBeds from "../../../../components/ProductListBeds";
-import ProductListSale  from '../../../../components/ProductListSale'
+  
+import ProductListSale from "../../../../components/ProductListSale";
  import { useEffect, useState } from "react";
 const sortOptions = [
     "Featured",
