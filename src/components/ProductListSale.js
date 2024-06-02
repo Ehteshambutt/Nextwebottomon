@@ -1,16 +1,16 @@
-"use client"
-import { Mattresses, Products } from '../data/products'
-import React, { useEffect, useState, useRef, Suspense } from 'react'
-import ProductCardAccessories from './ProductCardAccessories'
-import ReactPaginate from 'react-paginate'
-import ProductCardsale from './ProductCardsale'
+'use client';
+import { Mattresses, Products } from '../data/products';
+import React, { useEffect, useState, useRef, Suspense } from 'react';
+import ProductCardAccessories from './ProductCardAccessories';
+import ReactPaginate from 'react-paginate';
+import ProductCardsale from './ProductCardsale';
 
 const ProductListSale = ({ selectedGrid, setSelectedGrid, pageType,CallingFrom }) => {
-    const listRef = useRef()
+    const listRef = useRef();
     const isMattresses = pageType === 'Mattress';
     const isMattressesPocketSprung = pageType === 'PocketSprung';
      //pagination 
-    const itemsPerPage = 10
+    const itemsPerPage = 10;
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
     const currentProducts = isMattresses ? Mattresses?.slice(itemOffset, endOffset) : Products?.slice(itemOffset, endOffset);
@@ -22,14 +22,14 @@ const ProductListSale = ({ selectedGrid, setSelectedGrid, pageType,CallingFrom }
         const newOffset = (event.selected * itemsPerPage) % Products?.length;
         window.scrollTo({
             top: 0,
-            behavior: "smooth"
+            behavior: 'smooth'
         });
         setItemOffset(newOffset);
     };
     return (
         <div>
-            <section id="Projects"
-                className={` ${selectedGrid === 2 ? "custom-grid" : "grid grid-cols-" + selectedGrid} ${selectedGrid !== 0 ? 'justify-items-center justify-center gap-6 ' : ''}mt-10 mb-5 `}>
+            <section id='Projects'
+                className={` ${selectedGrid === 2 ? 'custom-grid' : 'grid grid-cols-' + selectedGrid} ${selectedGrid !== 0 ? 'justify-items-center justify-center gap-6 ' : ''}mt-10 mb-5 `}>
                     {/* {currentProducts.map((product, i) => ( */}
                         <ProductCardsale CallingFrom={CallingFrom} pageType={pageType}  selectedGrid={selectedGrid}    />
                     {/* ))} */}
@@ -43,16 +43,16 @@ const ProductListSale = ({ selectedGrid, setSelectedGrid, pageType,CallingFrom }
                     nextLinkClassName='text-primary'
                     previousClassName='text-primary'
                     className='flex gap-5'
-                    breakLabel="..."
-                    nextLabel="Next"
+                    breakLabel='...'
+                    nextLabel='Next'
                     onPageChange={handlePageClick}
                     pageRangeDisplayed={5}
                     pageCount={pageCount}
-                    previousLabel="Previous"
+                    previousLabel='Previous'
                     renderOnZeroPageCount={null}
                 /></div>
         </div>
-    )
-}
+    );
+};
 
-export default ProductListSale
+export default ProductListSale;

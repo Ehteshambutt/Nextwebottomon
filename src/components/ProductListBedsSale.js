@@ -1,16 +1,16 @@
-"use client"
-import { Mattresses, Products } from '../data/products'
-import React, { useEffect, useState, useRef, Suspense } from 'react'
-import ProductCard from './ProductCard'
-import ReactPaginate from 'react-paginate'
-import ProductCardBeds from './ProductCardBeds'
+"use client";
+import { Mattresses, Products } from '../data/products';
+import React, { useEffect, useState, useRef, Suspense } from 'react';
+import ProductCard from './ProductCard';
+import ReactPaginate from 'react-paginate';
+import ProductCardBeds from './ProductCardBeds';
 
 const ProductListSale = ({ selectedGrid, setSelectedGrid, pageType ,CallingFrom}) => {
-    const listRef = useRef()
+    const listRef = useRef();
     const isMattresses = pageType === 'Mattress';
 
     //pagination 
-    const itemsPerPage = 10
+    const itemsPerPage = 10;
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
     const currentProducts = isMattresses ? Mattresses?.slice(itemOffset, endOffset) : Products?.slice(itemOffset, endOffset);
@@ -22,7 +22,8 @@ const ProductListSale = ({ selectedGrid, setSelectedGrid, pageType ,CallingFrom}
         window.scrollTo({
             top: 0,
             behavior: "smooth"
-        });
+        }
+    );
         setItemOffset(newOffset);
     };
     return (
@@ -49,7 +50,7 @@ const ProductListSale = ({ selectedGrid, setSelectedGrid, pageType ,CallingFrom}
                     renderOnZeroPageCount={null}
                 /></div>
         </div>
-    )
-}
+    );
+};
 
-export default ProductListSale
+export default ProductListSale;

@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import axios from 'axios';
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react';
 
 const ProductCardMatress = ({   selectedGrid,   pageType,CallingFrom }) => {
   const imageRef = useRef();
@@ -8,7 +8,6 @@ const ProductCardMatress = ({   selectedGrid,   pageType,CallingFrom }) => {
   const icon2Ref = useRef();
   const isMattresses = pageType === 'Mattress';
   const [mattresses, setMattresses] = useState([]);
-console.log(CallingFrom,'CallingFrom___')
   useEffect(() => {
       const fetchMattresses = async () => {
           try {
@@ -134,7 +133,7 @@ console.log(CallingFrom,'CallingFrom___')
 
         </div>
          : 
-         <div className="min-w-full min-h-full bg-white shadow-md rounded-xl  hover:shadow-xl overflow-hidden">
+         <div key={index.id} className="min-w-full min-h-full bg-white shadow-md rounded-xl  hover:shadow-xl overflow-hidden">
             <div className="overflow-hidden relative">
                 <span ref={icon1Ref} className='absolute left-5 top-2 text-white hidden z-10'><i className='font-extralight fa fa-regular fa-heart'></i></span>
                 <span ref={icon2Ref} className='absolute left-5 top-8 text-white hidden z-10'><i className='font-extralight fa fa-solid fa-code-compare'></i></span>
@@ -159,7 +158,7 @@ console.log(CallingFrom,'CallingFrom___')
             </div>
         </div>
       ))
-    )
-}
+    );
+};
 
-export default ProductCardMatress
+export default ProductCardMatress;

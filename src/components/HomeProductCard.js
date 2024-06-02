@@ -12,19 +12,19 @@ const HomeProductCard = ({ product, index }) => {
                 style={{ objectFit: 'contain' }}
             />
             <div className='text-center my-4'>
-                <a className="byb-badge">
+                <a className='byb-badge'>
                     <span>Customize your bed</span>
                 </a>
             </div>
-            <div className="">
-                <span className="text-gray-400 mr-3 text-xs  hover:text-primary duration-500">{product.category}</span>
-                <span className="text-black text-sm hover:text-primary duration-500 block capitalize font-medium">{product.name}</span>
-                <div className="flex items-center">
+            <div className=''>
+                <span className='text-gray-400 mr-3 text-xs  hover:text-primary duration-500'>{product.category}</span>
+                <span className='text-black text-sm hover:text-primary duration-500 block capitalize font-medium'>{product.name}</span>
+                <div className='flex items-center'>
                     {product.discount.length ? <React.Fragment><del>
-                        <p className="text-sm text-gray-400 cursor-auto me-2">{product.price}</p>
+                        <p className='text-sm text-gray-400 cursor-auto me-2'>{product.price}</p>
                     </del>
-                        <p className="text-sm cursor-auto text-red-600">{product.price}</p></React.Fragment> :
-                        <p className="text-sm cursor-auto text-gray-400">{product.price}</p>}
+                        <p className='text-sm cursor-auto text-red-600'>{product.price}</p></React.Fragment> :
+                        <p className='text-sm cursor-auto text-gray-400'>{product.price}</p>}
                 </div>
             </div>
         </div>

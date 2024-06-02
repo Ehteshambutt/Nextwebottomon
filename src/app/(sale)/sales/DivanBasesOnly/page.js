@@ -1,4 +1,7 @@
-"use client"
+"use client";
+import dynamic from 'next/dynamic'
+import {Suspense} from "react";
+
  import Drawer from "../../../../components/ButtomDrawer";
  import ProductFilter from  '../../../../../src/components/ProductFilter'
 import ProductGridSelector from "../../../../components/ProductGridSelector";
@@ -19,6 +22,7 @@ const sortOptions = [
 ]
 
 const DivanBasesOnly = () => {
+    
     const [selected, setSelected] = useState("Featured")
     const [isOpen, setIsOpen] = useState(false);
     const [openBottom, setOpenBottom] = useState(false);

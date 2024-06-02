@@ -1,6 +1,6 @@
-'use client'
+'use client';
 import axios from 'axios';
-import React, { useEffect, useRef, useState  } from 'react'
+import React, { useEffect, useRef, useState  } from 'react';
 
 const ProductCardsale = ({ name, price, image, hoverImage, discount, size, category, selectedGrid, index, pageType ,CallingFrom}) => {
     const imageRef = useRef();
@@ -72,7 +72,7 @@ const ProductCardsale = ({ name, price, image, hoverImage, discount, size, categ
     }, []);
     return (
         mattresses.map((item,index)=>(
-        selectedGrid === 0 ? <div className={`flex p-[20px] md:gap-x-4  border border-primary ${index >= 0 && index < 9 ? "border-b-0" : ""} `}>
+        selectedGrid === 0 ? <div key={index} className={`flex p-[20px] md:gap-x-4  border border-primary ${index >= 0 && index < 9 ? "border-b-0" : ""} `}>
             <div className="overflow-hidden rounded-t-xl relative " >
                 <span ref={icon1Ref} className='absolute left-5 top-2 text-white hidden z-10'><i className='font-extralight fa fa-regular fa-heart'></i></span>
                 <span ref={icon2Ref} className='absolute left-5 top-8 text-white hidden z-10'><i className='font-extralight fa fa-solid fa-code-compare'></i></span>
@@ -100,7 +100,7 @@ const ProductCardsale = ({ name, price, image, hoverImage, discount, size, categ
                 </div>
             </div>
 
-        </div> : <div className="min-w-full min-h-full bg-white shadow-md rounded-xl  hover:shadow-xl overflow-hidden">
+        </div> : <div key={index} className="min-w-full min-h-full bg-white shadow-md rounded-xl  hover:shadow-xl overflow-hidden">
             <div className="overflow-hidden relative">
                 <span ref={icon1Ref} className='absolute left-5 top-2 text-white hidden z-10'><i className='font-extralight fa fa-regular fa-heart'></i></span>
                 <span ref={icon2Ref} className='absolute left-5 top-8 text-white hidden z-10'><i className='font-extralight fa fa-solid fa-code-compare'></i></span>
@@ -126,7 +126,7 @@ const ProductCardsale = ({ name, price, image, hoverImage, discount, size, categ
             </div>
         </div>
  ))
-    )
-}
+    );
+};
 
-export default ProductCardsale
+export default ProductCardsale;

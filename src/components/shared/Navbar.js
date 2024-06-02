@@ -20,7 +20,7 @@ import { useRouter } from 'next/navigation';
 const Navbar = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [animationDirection, setAnimationDirection] = useState('');
-  const router = useRouter()
+  const router = useRouter();
   // Material sizes for Beds
   const [BedOpen, setBedOpen] = useState(false);
   const [shopByBedSize, setshopByBedSize] = useState(false);
@@ -34,7 +34,7 @@ const Navbar = () => {
   const [shopByType, setShopByType] = useState(false);
   const [shopByFirmness, setShopByFirmness] = useState(false);
   const [discountBeds, setDiscountBeds] = useState(false);
-  const [showLoftBeds, setShowLoftBeds] = useState(false)
+  const [showLoftBeds, setShowLoftBeds] = useState(false);
 
   // Material sizes for Accessories
   const [accessoriesOpen, setIsAccessoriesOpen] = useState(false);
@@ -143,13 +143,13 @@ const Navbar = () => {
   };
   const exitDiscountBedsDropdown = () => {
     setDiscountBeds(!discountBeds);
-    setShopByBedType(false)
-    setBedOpen(false)
+    setShopByBedType(false);
+    setBedOpen(false);
   };
   const exitDisplayLoftBeds = () => {
     setShowLoftBeds(!showLoftBeds);
-    setShopByBedType(false)
-    setBedOpen(false)
+    setShopByBedType(false);
+    setBedOpen(false);
   };
 
   const displayShopByFirmness = () => {
@@ -168,14 +168,12 @@ const Navbar = () => {
     setshopByBedSize(!shopByBedSize);
   };
   const exitDropdown = () => {
-    console.log('function called')
-    // Perform any necessary actions before closing the dropdown
-    // For example, triggering the animation
+   
     const dropdown = document.querySelector('.dropdown-content');
     if (dropdown) {
       dropdown.classList.remove('animate__slideInLeft');
       dropdown.classList.add('animate__slideOutLeft');
-    }
+    };
 
     // Delay closing the dropdown to allow the animation to finish
     setTimeout(() => {
@@ -373,7 +371,7 @@ const Navbar = () => {
               </div>
               <div className='flex flex-col items-center gap-1 cursor-pointer'>
                 <Image src={basket} onClick={()=>{
-                  router.push('/NewPaymentCardSetup')
+                  router.push('/NewPaymentCardSetup');
                 }} width={18} height={18} alt='Basket' />
                 <span className='font-bold text-[0.6rem]'>Basket</span>
               </div>
@@ -652,7 +650,8 @@ const Navbar = () => {
                 </ul>
 
                 <div className='absolute bg-[white] w-[100%] bottom-0 h-[10%]  border-t-[1px] rounded-b-2xl'>
-                  <button onClick={() => { router.push('/beds'); exitBedDropdown() }} className='bg-[#08c] absolute right-[10%] flex gap-5 items-center text-sm text-white px-4 py-[0.6rem]  h-[100%] hover:bg-[#44bcf7] transition border-color text duration-100 ease-out delay-0'>
+                  <button onClick={() => { router.push('/beds'); 
+                  exitBedDropdown(); }} className='bg-[#08c] absolute right-[10%] flex gap-5 items-center text-sm text-white px-4 py-[0.6rem]  h-[100%] hover:bg-[#44bcf7] transition border-color text duration-100 ease-out delay-0'>
                     <span> View All Beds</span>
                     <i className='fa fa-chevron-right' aria-hidden='true'></i>
                   </button>
@@ -881,7 +880,8 @@ const Navbar = () => {
                   <span> Accessories</span>{' '}
                   <i className='fa fa-chevron-right' aria-hidden='true'></i>
                 </div>
-                <div onClick={() => { router.push('/sales'); exitDropdown() }} className='text-[0.9rem] p-4 border-[1px] items-center  flex gap-8 cursor-pointer  font-bold'>
+                <div onClick={() => { router.push('/sales'); 
+                exitDropdown(); }} className='text-[0.9rem] p-4 border-[1px] items-center  flex gap-8 cursor-pointer  font-bold'>
                   <span> Sale</span>{' '}
                   <i className='fa fa-chevron-right' aria-hidden='true'></i>
                 </div>
@@ -952,7 +952,8 @@ const Navbar = () => {
                     <span> Shop by Firmness</span>{' '}
                     <i className='fa fa-chevron-right' aria-hidden='true'></i>
                   </div>
-                  <div onClick={() => { router.push('/mattresses'); exitDropdown() }} className='text-[0.9rem] p-4 flex gap-8 items-center cursor-pointer text-[#08c] font-semibold'>
+                  <div onClick={() => { router.push('/mattresses');
+                   exitDropdown(); }} className='text-[0.9rem] p-4 flex gap-8 items-center cursor-pointer text-[#08c] font-semibold'>
                     <span> All Matresses</span>{' '}
                   </div>
                 </div>
@@ -1160,7 +1161,7 @@ const Navbar = () => {
                 <span> Shop by Material</span>{' '}
                 <i className='fa fa-chevron-right' aria-hidden='true'></i>
               </div>
-              <div onClick={() => { router.push('/beds'); exitBedDropdown() }} className='text-[0.9rem] bg-[#eee] text-[#08c] border p-4 flex gap-8 items-center cursor-pointer  font-semibold'>
+              <div onClick={() => { router.push('/beds'); exitBedDropdown(); }} className='text-[0.9rem] bg-[#eee] text-[#08c] border p-4 flex gap-8 items-center cursor-pointer  font-semibold'>
                 <span> All Beds</span>{' '}
               </div>
             </div>
@@ -1369,7 +1370,8 @@ const Navbar = () => {
                   <i
                     className='fa fa-chevron-left'
                     aria-hidden='true'
-                    onClick={() => { setShowLoftBeds(p => !p); setBedOpen(false); setShopByBedType(true) }}
+                    onClick={() => { setShowLoftBeds(p => !p); setBedOpen(false);
+                       setShopByBedType(true); }}
                   ></i>{' '}
                   <span>Loft Beds</span>{' '}
                 </div>
@@ -1456,7 +1458,8 @@ const Navbar = () => {
                 <span> Shop by Firmness</span>{' '}
                 <i className='fa fa-chevron-right' aria-hidden='true'></i>
               </div>
-              <div onClick={() => { router.push('/mattresses'); exitMatressesDropdown() }} className='text-[0.9rem] p-4 bg-[#eee] flex gap-8 items-center cursor-pointer text-[#08c] font-semibold'>
+              <div onClick={() => { router.push('/mattresses'); 
+              exitMatressesDropdown();}} className='text-[0.9rem] p-4 bg-[#eee] flex gap-8 items-center cursor-pointer text-[#08c] font-semibold'>
                 <span> All Matresses</span>{' '}
               </div>
             </div>
@@ -1497,7 +1500,7 @@ const Navbar = () => {
               <div onClick={exitAccessoriesDropdown} className='text-[0.9rem] border gap-8 items-center p-4 flex cursor-pointer hover:bg-[#08c] hover:text-white font-semibold'>
                 <span>Headboards</span>{' '}
               </div>
-              <div onClick={() => { router.push('/accessories'); exitAccessoriesDropdown() }} className='text-[0.9rem] p-4 border bg-[#eee] flex gap-8 items-center cursor-pointer text-[#08c] font-semibold'>
+              <div onClick={() => { router.push('/accessories'); exitAccessoriesDropdown(); }} className='text-[0.9rem] p-4 border bg-[#eee] flex gap-8 items-center cursor-pointer text-[#08c] font-semibold'>
                 <span> All Accessories</span>{' '}
               </div>
             </div>

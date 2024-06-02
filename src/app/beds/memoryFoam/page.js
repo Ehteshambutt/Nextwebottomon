@@ -1,10 +1,11 @@
 "use client"
+import React, { useState } from 'react'; // Import useState and React
+
 import Drawer from "../../../components/ButtomDrawer";
 import ProductFilter from "../../../components/ProductFilter";
 import ProductGridSelector from "../../../components/ProductGridSelector";
 import ProductListBeds from "../../../components/ProductListBeds";
- import { useEffect, useState } from "react";
-const sortOptions = [
+ const sortOptions = [
     "Featured",
     "Best selling",
     "Alphabetically, A-Z",
@@ -15,7 +16,7 @@ const sortOptions = [
     "Date, new to old"
 ]
 
-const memoryFoam = () => {
+const MemoryFoam  = () => {
     const [selected, setSelected] = useState("Featured")
     const [isOpen, setIsOpen] = useState(false);
     const [openBottom, setOpenBottom] = useState(false);
@@ -85,4 +86,4 @@ const memoryFoam = () => {
     );
 };
 
-export default memoryFoam;
+export default MemoryFoam ;
