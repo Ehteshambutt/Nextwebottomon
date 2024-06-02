@@ -373,7 +373,7 @@ const Navbar = () => {
               </div>
               <div className="flex flex-col items-center gap-1 cursor-pointer">
                 <Image src={basket} onClick={()=>{
-                  router.push('/paymentMethod/NewPaymentCardSetup')
+                  router.push('/NewPaymentCardSetup')
                 }} width={18} height={18} alt="Basket" />
                 <span className="font-bold text-[0.6rem]">Basket</span>
               </div>
