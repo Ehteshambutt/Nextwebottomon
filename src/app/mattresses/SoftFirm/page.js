@@ -4,8 +4,8 @@ import axios from 'axios';
 import Drawer from "../../../components/ButtomDrawer";
 import ProductFilter from "../../../components/ProductFilter";
 import ProductGridSelector from "../../../components/ProductGridSelector";
-import ProductList from "@/components/ProductList";
-import ProductListMatress from "@/components/ProductListMatress";
+import ProductList from "../../../components/ProductList";
+import ProductListMatress from "../../../components/ProductListMatress";
 
 const sortOptions = [
     "Featured",
