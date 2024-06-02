@@ -1,4 +1,28 @@
-// "use client";
+"use client";
+import React from 'react'
+
+const products = () => {
+  return (
+    <div>products</div>
+  )
+}
+
+export default products
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import { useState, useEffect } from "react";
 // import "@fortawesome/fontawesome-free/css/all.css";
 // import "animate.css/animate.min.css";
