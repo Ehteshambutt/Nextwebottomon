@@ -14,7 +14,7 @@ const ProductFilter = ({ pageType }) => {
                         Size
                     </div>
                     <div className="collapse-content">
-                        {Sizes.map((item, i) => (
+                        {Sizes?.map((item, i) => (
                             <div key={i} className='flex  py-2'>
                                 <input type="checkbox" className="checkbox checkbox-md rounded-full" id={item.name} />
                                 <label htmlFor={item.name} className="ms-2 flex flex-col"><span>{item.name}</span><span className='text-xs'>{item.size}</span></label>
@@ -28,7 +28,7 @@ const ProductFilter = ({ pageType }) => {
                         Mattress Type
                     </div>
                     <div className="collapse-content">
-                        {MatressTypes.map((item, i) => (
+                        {MatressTypes?.map((item, i) => (
                             <div key={i} className='flex  py-2'>
                                 <input type="checkbox" className="checkbox checkbox-md" id={item.title} />
                                 <label htmlFor={item.title} className="ms-2 flex justify-between"><span className='block'>{item.title}</span><span className='block'>({item.count})</span></label>
@@ -43,7 +43,7 @@ const ProductFilter = ({ pageType }) => {
                             Mattress Firmness
                         </div>
                         <div className="collapse-content">
-                            {MattressFirmness.map((item, i) => (
+                            {MattressFirmness?.map((item, i) => (
                                 <div key={i} className='flex  py-2'>
                                     <input type="checkbox" className="checkbox checkbox-md" id={item.title} />
                                     <label htmlFor={item.title} className="ms-2 flex justify-between"><span className='block'>{item.title}</span><span className='block'>({item.count})</span></label>
@@ -57,7 +57,7 @@ const ProductFilter = ({ pageType }) => {
                             Brand
                         </div>
                         <div className="collapse-content">
-                            {Brands.map((item, i) => (
+                            {Brands?.map((item, i) => (
                                 <div key={i} className='flex  py-2'>
                                     <input type="checkbox" className="checkbox checkbox-md" id={item.name} />
                                     <label htmlFor={item.name} className="ms-2 flex justify-between"><span className='block'>{item.name}</span><span className='block'>({item.count})</span></label>
@@ -73,7 +73,7 @@ const ProductFilter = ({ pageType }) => {
                             Bed Type
                         </div>
                         <div className="collapse-content">
-                            {BedTypes.map((item, i) => (
+                            {BedTypes?.map((item, i) => (
                                 <div key={i} className='flex  py-2'>
                                     <input type="checkbox" className="checkbox checkbox-md" id={item.name} />
                                     <label htmlFor={item.name} className="ms-2 flex justify-between"><span className='block'>{item.name}</span><span className='block'>({item.count})</span></label>
@@ -89,7 +89,7 @@ const ProductFilter = ({ pageType }) => {
                             Bed Storage
                         </div>
                         <div className="collapse-content">
-                            {BedStorage.map((item, i) => (
+                            {BedStorage?.map((item, i) => (
                                 <div key={i} className='flex  py-2'>
                                     <input type="checkbox" className="checkbox checkbox-md" id={item.name} />
                                     <label htmlFor={item.name} className="ms-2 flex justify-between"><span className='block'>{item.name}</span><span className='block'>({item.count})</span></label>
@@ -105,7 +105,7 @@ const ProductFilter = ({ pageType }) => {
                             Bed Finish/Colour
                         </div>
                         <div className="collapse-content">
-                            {BedFinish.map((item, i) => (
+                            {BedFinish?.map((item, i) => (
                                 <div key={i} className='flex  py-2'>
                                     <input type="checkbox" className="checkbox checkbox-md" id={item.name} />
                                     <label htmlFor={item.name} className="ms-2 flex justify-between"><span className='block'>{item.name}</span><span className='block'>({item.count})</span></label>
@@ -120,7 +120,7 @@ const ProductFilter = ({ pageType }) => {
                         Price
                     </div>
                     <div className="collapse-content">
-                        {Prices.map((item, i) => (<div className='flex  py-2' key={i}>
+                        {Prices?.map((item, i) => (<div className='flex  py-2' key={i}>
                             <input type="checkbox" className="checkbox checkbox-md" id={item.name} />
                             <label htmlFor={item.name} className="ms-2 flex justify-between"><span className='block'>{item.name}</span><span className='block'>({item.count})</span></label>
                         </div>))}

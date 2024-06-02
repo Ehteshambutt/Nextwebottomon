@@ -12,13 +12,13 @@ const ProductListMatress = ({ selectedGrid, setSelectedGrid, pageType,CallingFro
     const itemsPerPage = 10
     const [itemOffset, setItemOffset] = useState(0);
     const endOffset = itemOffset + itemsPerPage;
-    const currentProducts = isMattresses ? Mattresses.slice(itemOffset, endOffset) : Products.slice(itemOffset, endOffset);
+    const currentProducts = isMattresses ? Mattresses?.slice(itemOffset, endOffset) : Products?.slice(itemOffset, endOffset);
  
-    const pageCount = Math.ceil(Products.length / itemsPerPage);
+    const pageCount = Math.ceil(Products?.length / itemsPerPage);
 
     // Invoke when user click to request another page.
     const handlePageClick = (event) => {
-        const newOffset = (event.selected * itemsPerPage) % Products.length;
+        const newOffset = (event.selected * itemsPerPage) % Products?.length;
         window.scrollTo({
             top: 0,
             behavior: "smooth"
