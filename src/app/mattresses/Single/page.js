@@ -8,8 +8,7 @@ import ProductGridSelector from "../../../components/ProductGridSelector";
 import ProductList from "../../../components/ProductList";
 import ProductListMatress from "../../../components/ProductListMatress";
 import dynamic from 'next/dynamic';
-import NoSSR from 'react-no-ssr';
-const sortOptions = [
+ const sortOptions = [
     "Featured",
     "Best selling",
     "Alphabetically, A-Z",
@@ -43,7 +42,7 @@ const Single = () => {
     fetchMattresses();
   }, []);
     return (
-        <NoSSR>
+    
         <div className="">
             <div>
                 <div className="products-banner bg-gray-500 flex justify-center p-20">
@@ -102,7 +101,7 @@ const Single = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
-        </NoSSR>
+   
     );
 };
 

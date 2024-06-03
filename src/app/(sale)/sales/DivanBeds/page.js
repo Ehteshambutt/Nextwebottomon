@@ -7,8 +7,7 @@ import ProductListBeds from '../../../../components/ProductListBeds'
 
 import ProductListSale from "../../../../components/ProductListSale";
 import dynamic from 'next/dynamic';
-import NoSSR from 'react-no-ssr';
-// const DynamicComponent = dynamic(() => import('../DivanBeds'), {
+ // const DynamicComponent = dynamic(() => import('../DivanBeds'), {
 //     ssr: false,
 //   });
  import { useEffect, useState } from "react";
@@ -30,8 +29,7 @@ const DivanBeds = () => {
     const handleClick = () => setIsOpen(!isOpen);
     const [selectedGrid, setSelectedGrid] = useState(2);
     return (
-<NoSSR>
-        <div className="">
+         <div className="">
 
             <div>
                 <div className="products-banner bg-gray-500 flex justify-center p-20">
@@ -90,8 +88,7 @@ const DivanBeds = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
-        </NoSSR>
-    );
+     );
 };
 
 export default DivanBeds;
