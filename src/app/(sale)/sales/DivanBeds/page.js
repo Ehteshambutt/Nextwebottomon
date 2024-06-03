@@ -6,6 +6,11 @@ import ProductListAccessories from "../../../../components/ProductListAccessorie
 import ProductListBeds from '../../../../components/ProductListBeds'  
 
 import ProductListSale from "../../../../components/ProductListSale";
+import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
+// const DynamicComponent = dynamic(() => import('../DivanBeds'), {
+//     ssr: false,
+//   });
  import { useEffect, useState } from "react";
 const sortOptions = [
     "Featured",
@@ -25,7 +30,7 @@ const DivanBeds = () => {
     const handleClick = () => setIsOpen(!isOpen);
     const [selectedGrid, setSelectedGrid] = useState(2);
     return (
-
+<NoSSR>
         <div className="">
 
             <div>
@@ -85,6 +90,7 @@ const DivanBeds = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
     );
 };
 

@@ -1,10 +1,12 @@
 "use client"
+
 import Drawer from "../../../../components/ButtomDrawer";
  import ProductFilter from  '../../../../../src/components/ProductFilter'
 import ProductGridSelector from "../../../../components/ProductGridSelector";
 import ProductListAccessories from "../../../../components/ProductListAccessories";
 import ProductListBeds from '../../../../components/ProductListBeds'  
-
+import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
 import ProductListSale from "../../../../components/ProductListSale";
  import { useEffect, useState } from "react";
 const sortOptions = [
@@ -24,8 +26,14 @@ const Headboards = () => {
     const [openBottom, setOpenBottom] = useState(false);
     const handleClick = () => setIsOpen(!isOpen);
     const [selectedGrid, setSelectedGrid] = useState(2);
+    useEffect(() => {
+        // This useEffect runs only in the client-side
+        if (typeof window !== "undefined") {
+            // Place any code that needs to access window here
+        }
+    }, []);
     return (
-
+<NoSSR>
         <div className="">
 
             <div>
@@ -85,6 +93,7 @@ const Headboards = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
     );
 };
 

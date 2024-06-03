@@ -1,4 +1,5 @@
 "use client"
+'skip ssr'
 import Drawer from "../../../components/ButtomDrawer";
 import ProductFilter from "../../../components/ProductFilter";
 import ProductGridSelector from "../../../components/ProductGridSelector";

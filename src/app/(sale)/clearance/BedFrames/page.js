@@ -1,12 +1,14 @@
 "use client"
+'skip ssr'
 import Drawer from "../../../../components/ButtomDrawer";
  import ProductFilter from  '../../../../../src/components/ProductFilter'
 import ProductGridSelector from "../../../../components/ProductGridSelector";
 import ProductListAccessories from "../../../../components/ProductListAccessories";
 import ProductListBeds from '../../../../components/ProductListBeds'  
-
-import ProductListSale from "../../../../components/ProductListSale";
+ import ProductListSale from "../../../../components/ProductListSale";
  import { useEffect, useState } from "react";
+ import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
 const sortOptions = [
     "Featured",
     "Best selling",
@@ -24,9 +26,16 @@ const BedFrames = () => {
     const [openBottom, setOpenBottom] = useState(false);
     const handleClick = () => setIsOpen(!isOpen);
     const [selectedGrid, setSelectedGrid] = useState(2);
-    return (
+    useEffect(() => {
+        // Ensure any window-related code runs only on the client-side
+        if (typeof window !== "undefined") {
+            // Client-side only logic here
+        }
+    }, []);
 
-        <div className="">
+    return (
+<NoSSR>   
+         <div className="">
 
             <div>
                 <div className="products-banner bg-gray-500 flex justify-center p-20">
@@ -85,6 +94,8 @@ const BedFrames = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
+
     );
 };
 

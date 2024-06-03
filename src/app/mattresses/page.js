@@ -1,10 +1,12 @@
-"use client"
+"use client";
+'skip ssr';
 import Drawer from "../../components/ButtomDrawer";
 import ProductFilter from "../../components/ProductFilter";
 import ProductGridSelector from "../../components/ProductGridSelector";
 import ProductList from "../../components/ProductList";
 import ProductListMatress from "../../components/ProductListMatress";
-
+import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
 import { useState } from "react";
 const sortOptions = [
     "Featured",
@@ -23,6 +25,7 @@ const ProductListingPage = () => {
     const [openBottom, setOpenBottom] = useState(false);
     const handleClick = () => setIsOpen(!isOpen);
     return (
+        <NoSSR>
         <div className="">
             <div>
                 <div className="products-banner bg-gray-500 flex justify-center p-20">
@@ -81,6 +84,7 @@ const ProductListingPage = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
     );
 };
 

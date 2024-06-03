@@ -4,7 +4,8 @@ import Drawer from "../../../../components/ButtomDrawer";
 import ProductGridSelector from "../../../../components/ProductGridSelector";
 import ProductListAccessories from "../../../../components/ProductListAccessories";
 import ProductListBeds from '../../../../components/ProductListBeds'  
-
+import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
 import ProductListSale from "../../../../components/ProductListSale";
  import { useEffect, useState } from "react";
 const sortOptions = [
@@ -24,8 +25,9 @@ const Furniture = () => {
     const [openBottom, setOpenBottom] = useState(false);
     const handleClick = () => setIsOpen(!isOpen);
     const [selectedGrid, setSelectedGrid] = useState(2);
+    
     return (
-
+<NoSSR>
         <div className="">
 
             <div>
@@ -85,6 +87,7 @@ const Furniture = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
     );
 };
 

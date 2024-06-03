@@ -1,4 +1,5 @@
-"use client"
+"use client";
+'skip ssr';
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Drawer from "../../../components/ButtomDrawer";
@@ -6,7 +7,8 @@ import ProductFilter from "../../../components/ProductFilter";
 import ProductGridSelector from "../../../components/ProductGridSelector";
 import ProductList from "../../../components/ProductList";
 import ProductListMatress from "../../../components/ProductListMatress";
-
+import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
 const sortOptions = [
     "Featured",
     "Best selling",
@@ -41,6 +43,7 @@ const PocketSprung = () => {
     fetchMattresses();
   }, []);
     return (
+        <NoSSR>
         <div className="">
             <div>
                 <div className="products-banner bg-gray-500 flex justify-center p-20">
@@ -99,6 +102,7 @@ const PocketSprung = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
     );
 };
 

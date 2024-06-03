@@ -4,6 +4,8 @@ import ProductFilter from "../../components/ProductFilter";
 import ProductGridSelector from "../../components/ProductGridSelector";
 import ProductList from "../..//components/ProductList";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+import NoSSR from 'react-no-ssr';
 const sortOptions = [
     "Featured",
     "Best selling",
@@ -22,7 +24,7 @@ const ProductListingPage = () => {
     const handleClick = () => setIsOpen(!isOpen);
     const [selectedGrid, setSelectedGrid] = useState(2);
     return (
-
+<NoSSR>
         <div className="">
 
             <div>
@@ -82,6 +84,7 @@ const ProductListingPage = () => {
             </div>
             <Drawer open={openBottom} side="bottom" setOpen={setOpenBottom} sortOptions={sortOptions} setSelected={setSelected} selected={selected} />
         </div>
+        </NoSSR>
     );
 };
 

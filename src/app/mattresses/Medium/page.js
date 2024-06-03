@@ -1,4 +1,5 @@
 "use client"
+'skip ssr'
 import { useEffect, useState } from "react";
 import axios from 'axios';
 import Drawer from "../../../components/ButtomDrawer";
